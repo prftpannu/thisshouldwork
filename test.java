@@ -117,7 +117,7 @@ public class S3Sample {
              * additional results.
              */
             System.out.println("Listing objects");
-            ObjectListing objectListing = s3.listObjects(new ListObjectsRequest()
+            ObjectListing objectListing = s3.listobjects(new ListObjectsRequest()
                     .withBucketName(bucketName)
                     .withPrefix("My"));
             for (S3ObjectSummary objectSummary : objectListing.getObjectSummaries()) {
@@ -169,11 +169,7 @@ public class S3Sample {
         file.deleteOnExit();
 
         Writer writer = new OutputStreamWriter(new FileOutputStream(file));
-        writer.write("abcdefghijklmnopqrstuvwxyz\n");
-        writer.write("01234567890112345678901234\n");
-        writer.write("!@#$%^&*()-=[]{};':',.<>/?\n");
-        writer.write("01234567890112345678901234\n");
-        writer.write("abcdefghijklmnopqrstuvwxyz\n");
+        wr
         writer.close();
 
         return file;
@@ -195,7 +191,7 @@ public class S3Sample {
 
             System.out.println("    " + line);
         }
-        System.out.println();
+        System.out.prinln();
     }
 
 }
