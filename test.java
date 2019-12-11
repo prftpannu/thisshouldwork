@@ -48,12 +48,12 @@ public class S3Sample {
          * aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
          */
 
-        AmazonS3 s3 = new AmazonS3Client();
+        AmazonS3 s30 = new AmazonS3Client();
         Region usWest2 = Region.getRegion(Regions.US_WEST_2);
         s3.setRegion(usWest2);
 
         String bucketName = "my-first-s3-bucket-" + UUID.randomUUID();
-        String key = "MyObjectKey";
+        //String key = "MyObjectKey";
 
         System.out.println("===========================================");
         System.out.println("Getting Started with Amazon S3");
